@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrados | Cacau Show</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="shortcut icon" href="Imgs/Icone.webp" type="image/x-icon">
+    <link rel="stylesheet" href="CSSs/adm.css">
+    <link rel="stylesheet" href="CSSs/cadastrados.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="sidebar-top">
+                <div class="nav-menu">
+                    <a href="adm.html" class="nav-link"><i class="ph ph-squares-four"></i></a>
+                    <a href="estoque.html" class="nav-link"><i class="ph ph-package"></i></a>
+                    <a href="cadastrados.html" class="nav-link active"><i class="ph ph-users"></i></a>
+                </div>
+            </div>
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-link"><i class="ph ph-gear"></i></a>
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Admin Avatar" class="avatar">
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <h1>Cadastrados</h1>
+                    <p class="label">Gerenciar clientes, Setor e funcionários</p>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <input type="text" placeholder="Pesquisar...">
+                    </div>
+                    <div class="user-profile-header" id="userMenu">
+    <span>Olá, <strong>Admin</strong></span>
+    <i class="ph ph-caret-down"></i>
+
+    <button class="logout-btn" id="logoutBtn">
+        <i class="ph ph-sign-out"></i>
+        Sair
+    </button>
+</div>
+            </header>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <!-- <i class="ph ph-user-circle" style="color: var(--accent-caramel);"></i> -->
+                    <div class="number" id="clientes-count">0</div>
+                    <div class="label">Clientes</div>
+                </div>
+                <div class="stat-card">
+                    <!-- <i class="ph ph-store" style="color: #9C27B0;"></i> -->
+                    <div class="number" id="setores-count">0</div>
+                    <div class="label">Setores</div>
+                </div>
+                <div class="stat-card">
+                    <!-- <i class="ph ph-briefcase" style="color: #6D8B74;"></i> -->
+                    <div class="number" id="funcionarios-count">0</div>
+                    <div class="label">Funcionários</div>
+                </div>
+            </div>
+
+            <div class="register-container">
+                <!-- Clientes -->
+                <section class="card">
+                    <div class="register-section">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <h2>Clientes</h2>
+                            <button id="novoClienteBtn" class="btn-outline" style="padding: 10px 20px; border-radius: 14px;">
+    <i class="ph ph-plus"></i> Novo Cliente
+</button>
+                        </div>
+
+                        <table class="register-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Email</th>
+                                    <th>Telefone</th>
+                                    <th>Data de Cadastro</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="clientes-body">
+                                <tr>
+                                    <td><strong>Ana Silva</strong></td>
+                                    <td>ana.silva@email.com</td>
+                                    <td>(11) 98765-4321</td>
+                                    <td>10/05/2026</td>
+                                    <td><span class="status-badge ativo">Ativo</span></td>
+                                    <td>
+                                        <button class="btn-action">Editar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>João Lima</strong></td>
+                                    <td>joao.lima@email.com</td>
+                                    <td>(11) 99876-5432</td>
+                                    <td>08/05/2026</td>
+                                    <td><span class="status-badge ativo">Ativo</span></td>
+                                    <td>
+                                        <button class="btn-action">Editar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Renata Costa</strong></td>
+                                    <td>renata.costa@email.com</td>
+                                    <td>(21) 97654-3210</td>
+                                    <td>05/05/2026</td>
+                                    <td><span class="status-badge inativo">Inativo</span></td>
+                                    <td>
+                                        <button class="btn-action">Editar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Setores -->
+                <section class="card">
+                    <div class="register-section">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <h2>Setores</h2>
+                            <button id="novoSetorBtn" class="btn-outline" style="padding: 10px 20px; border-radius: 14px;">
+    <i class="ph ph-plus"></i> Novo Setor
+</button>
+                        </div>
+
+                        <table class="register-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome da Franquia</th>
+                                    <th>Responsável</th>
+                                    <th>Localização</th>
+                                    <th>Email</th>
+                                    <th>Data de Cadastro</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="setores-body">
+                                <tr>
+                                    <td><strong>Setor de Vendas</strong></td>
+                                    <td>Carlos Martins</td>
+                                    <td>São Paulo - SP</td>
+                                    <td>centro@cacaushow.com</td>
+                                    <td>01/03/2026</td>
+                                    <td><span class="status-badge ativo">Ativo</span></td>
+                                    <td>
+                                        <button class="btn-action">Editar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Setor de TI</strong></td>
+                                    <td>Patricia Oliveira</td>
+                                    <td>São Paulo - SP</td>
+                                    <td>vilamariana@cacaushow.com</td>
+                                    <td>15/02/2026</td>
+                                    <td><span class="status-badge ativo">Ativo</span></td>
+                                    <td>
+                                        <button class="btn-action">Editar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Setor de RH</strong></td>
+                                    <td>Felipe Santos</td>
+                                    <td>Rio de Janeiro - RJ</td>
+                                    <td>zonasul@cacaushow.com</td>
+                                    <td>22/01/2026</td>
+                                    <td><span class="status-badge inativo">Inativo</span></td>
+                                    <td>
+                                        <button class="btn-action">Editar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Funcionários -->
+                <section class="card">
+                    <div class="register-section">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <h2>Funcionários</h2>
+                            <button id="novoFuncionarioBtn" class="btn-outline" style="padding: 10px 20px; border-radius: 14px;">
+    <i class="ph ph-plus"></i> Novo Funcionário
+</button>
+                        </div>
+
+                        <table class="register-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Email</th>
+                                    <th>Cargo</th>
+                                    <th>Franquia</th>
+                                    <th>Data de Admissão</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="funcionarios-body">
+                                <tr>
+                                    <td><strong>Maria Silva</strong></td>
+                                    <td>maria@cacaushow.com</td>
+                                    <td>Vendedora</td>
+                                    <td>Centro</td>
+                                    <td>15/04/2026</td>
+                                    <td><span class="status-badge ativo">Ativo</span></td>
+                                    <td>
+                                        <button class="btn-action">Editar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Pedro Oliveira</strong></td>
+                                    <td>pedro@cacaushow.com</td>
+                                    <td>Gerente</td>
+                                    <td>Vila Mariana</td>
+                                    <td>20/03/2026</td>
+                                    <td><span class="status-badge ativo">Ativo</span></td>
+                                    <td>
+                                        <button class="btn-action">Editar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Camila Santos</strong></td>
+                                    <td>camila@cacaushow.com</td>
+                                    <td>Operacional</td>
+                                    <td>Centro</td>
+                                    <td>10/02/2026</td>
+                                    <td><span class="status-badge ativo">Ativo</span></td>
+                                    <td>
+                                        <button class="btn-action">Editar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Lucas Costa</strong></td>
+                                    <td>lucas@cacaushow.com</td>
+                                    <td>Analista</td>
+                                    <td>Vila Mariana</td>
+                                    <td>05/01/2026</td>
+                                    <td><span class="status-badge inativo">Inativo</span></td>
+                                    <td>
+                                        <button class="btn-action">Editar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+
+    <div class="modal">
+
+        <div class="modal-header">
+            <h2 id="modalTitulo">Novo Cadastro</h2>
+
+            <button class="fechar-modal" id="fecharModal">
+                <i class="ph ph-x"></i>
+            </button>
+        </div>
+
+        <form id="modalForm">
+
+            <div class="modal-fields" id="modalCampos">
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" class="btn-cancelar" id="cancelarModal">
+                    Cancelar
+                </button>
+
+                <button type="submit" class="btn-salvar">
+                    Salvar
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<script src="JS/cadastrados.js"></script>
+</body>
+
+</html>

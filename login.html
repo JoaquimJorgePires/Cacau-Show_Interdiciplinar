@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login | Cacau Show</title>
+  <link rel="stylesheet" href="CSSs/login.css">
+  <link rel="shortcut icon" href="Imgs/Icone.webp">
+
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .loading {
+      position: relative;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .loading::after {
+      content: '';
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      border: 2px solid white;
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      transform: translateY(-50%);
+    }
+
+    @keyframes spin {
+      to {
+        transform: translateY(-50%) rotate(360deg);
+      }
+    }
+
+    .success-message {
+      display: none;
+      font-size: 1.2rem;
+      text-align: center;
+      color: #3a7f2d;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <div class="wrap fade-in">
+
+    <section class="promo">
+      <img src="Imgs/logo_cacau_show.svg" width="260">
+      <h1>Bem-vindo de volta</h1>
+      <p>Continue adoçando seus momentos com a gente 🍫</p>
+    </section>
+
+    <main class="card fade-in">
+      <form id="loginForm" novalidate>
+
+        <h2>Entrar</h2>
+
+        <div class="field">
+          <label>Email</label>
+          <div class="input">
+            <input type="email" id="email" placeholder="seu@exemplo.com" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Senha</label>
+          <div class="input">
+            <input type="password" id="password" placeholder="••••••••" required>
+
+            <button type="button" id="togglePwd">
+              👁️
+            </button>
+          </div>
+        </div>
+
+        <div class="actions">
+          <label><input type="checkbox" id="rememberMe"> Lembrar-me</label>
+          <a href="#">Esqueci a senha</a>
+        </div>
+
+        <button type="submit" class="primary" id="submitBtn">
+          Entrar
+        </button>
+        <div class="success-message" id="successMsg">Login realizado com sucesso!</div>
+
+        <div class="divider">ou</div>
+
+        <div class="socials">
+          <button class="ghost">Google</button>
+          <button type="button" class="ghost" onclick="window.location.href='cadastro.html'">
+            Criar conta
+          </button>
+        </div>
+
+      </form>
+    </main>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="JS/supabase.js"></script>
+  <script src="JS/login.js"></script>
+  <div class="toast" id="toast">
+
+  <div class="toast-icon">
+    🍫
+  </div>
+
+  <div class="toast-text">
+
+    <strong id="toastTitle">
+      Título
+    </strong>
+
+    <span id="toastMessage">
+      Mensagem
+    </span>
+
+  </div>
+
+</div>
+</body>
+
+</html>

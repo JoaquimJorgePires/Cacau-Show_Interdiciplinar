@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cadastro | Cacau Show</title>
+
+  <link rel="stylesheet" href="CSSs/cadastro.css">
+
+  <link rel="shortcut icon" href="Imgs/Icone.webp" type="image/x-icon">
+</head>
+
+<body>
+
+  <div class="wrap fade-in">
+
+    <section class="promo">
+
+      <img src="Imgs/logo_cacau_show.svg" alt="Cacau Show">
+
+      <h1>Boas-vindas!</h1>
+
+      <p>
+        Crie sua conta e continue adoçando seus momentos com a gente.
+      </p>
+
+    </section>
+
+    <main class="card fade-in">
+
+      <form id="cadastroForm">
+
+        <h2>Cadastrar-se</h2>
+
+        <div class="field">
+
+          <label for="nome">Nome</label>
+
+          <div class="input">
+
+            <input id="nome" name="nome" type="text" placeholder="Seu nome completo" required>
+
+          </div>
+
+        </div>
+
+        <div class="field">
+
+          <label for="email">Email</label>
+
+          <div class="input">
+
+            <input id="email" name="email" type="email" placeholder="seu@exemplo.com" required>
+
+          </div>
+
+        </div>
+
+        <div class="field">
+
+          <label for="cpf">CPF</label>
+
+          <div class="input">
+
+            <input id="cpf" name="cpf" type="text" placeholder="000.000.000-00" required>
+
+          </div>
+
+        </div>
+
+        <div class="field">
+
+          <label for="telefone">Telefone</label>
+
+          <div class="input">
+
+            <input id="telefone" name="telefone" type="tel" placeholder="(00) 00000-0000" required>
+
+          </div>
+
+        </div>
+
+        <div class="field">
+
+          <label for="password">Senha</label>
+
+          <div class="input">
+
+            <input id="password" name="senha" type="password" placeholder="••••••••" minlength="6" required>
+
+            <button type="button" id="togglePwd">
+
+              👁️
+
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="field">
+
+          <label for="confirmPassword">
+
+            Confirmar senha
+
+          </label>
+
+          <div class="input">
+
+            <input id="confirmPassword" type="password" placeholder="Repita sua senha" minlength="6" required>
+
+          </div>
+
+        </div>
+
+        <button class="primary" type="submit" id="submitBtn">
+
+          Cadastrar
+
+        </button>
+
+        <div class="success-message" id="successMsg">
+
+          ✅ Cadastro realizado com sucesso!
+
+        </div>
+
+        <div class="divider">ou</div>
+
+        <div class="socials">
+
+          <button type="button" class="ghost" onclick="window.location.href='login.html'">
+
+            Já tenho conta
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </main>
+
+  </div>
+
+<div id="toast" class="toast">
+  <strong id="toastTitle"></strong>
+  <p id="toastMessage"></p>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="JS/supabase.js"></script>
+
+  <script src="JS/cadastro.js"></script>
+</body>
+
+</html>

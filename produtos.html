@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSSs/produto.css">  
+    <link rel="stylesheet" href="CSSs/navbar.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"rel="stylesheet">
+    <link rel="shortcut icon" href="Imgs/Icone.webp" type="image/x-icon">
+    <link rel="icon" type="image/png" href="new_img/logo.png" />
+    <title>Produtos | Cacau Show</title>
+</head>
+
+<div id="toast" class="toast">
+
+    <div class="toast-icon">
+        <i class="fa-solid fa-circle-check"></i>
+    </div>
+
+    <div class="toast-text">
+        <strong id="toastTitulo">
+            Sucesso!
+        </strong>
+
+        <span id="toastMensagem">
+            Compra realizada.
+        </span>
+    </div>
+
+</div>
+
+<div id="modalLogout" class="modal-logout">
+
+    <div class="modal-logout-box">
+
+        <div class="logout-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <h2>Deseja sair?</h2>
+
+        <p>
+            Você será desconectado da sua conta.
+        </p>
+
+        <div class="logout-actions">
+
+            <button id="cancelarLogout" class="btn-cancelar">
+                Cancelar
+            </button>
+
+            <button id="confirmarLogout" class="btn-confirmar">
+                Sair
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<body>
+    <header>
+        <a href="Imgs/logo_cacau_show.svg" class="logo">
+            <img src="Imgs/logo_cacau_show.svg" id="logo">
+        </a>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre nós.html">Sobre nós</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="Seja Membro.html">Seja membro</a></li>
+            <li><a href="login.html" id="loginBtn">Entrar</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+    
+    <div class="full-width-image">
+    <img src="new_img/banner.jpg" alt="Descrição da Imagem">
+
+</div>
+    <div class="container">
+        <center>
+            <img src="Imgs/pascoa - Editado.png" alt="" class="logoProduto">
+        </center>
+
+        <div class="cards">
+            <div class="card">
+                <img src="new_img/ovo1.webp" alt="Chapeu Seletor" class="card__img">
+                <div class="card__data" data-id="6">
+                    <h1 class="card__title">Chapéu Seletor</h1>
+                    <span class="card__preci">$169,99</span>
+                    <p class="card__description">Delicie-se com o tablete de chocolate ao leite estampado com o Brasão
+                        de Hogwarts.</p>
+                    <a href="/compra" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="new_img/ovo2.webp" alt="Ovo Usinhos" class="card__img">
+                <div class="card__data" data-id="7">
+                    <h1 class="card__title">Ovo Usinhos</h1>
+                    <span class="card__preci">$139,99</span>
+                    <p class="card__description">Chocolate ao leite com drageados crocantes e uma pelúcia de LED.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="new_img/ovo7.webp" alt="Ovo Pelucia Batman" class="card__img">
+                <div class="card__data" data-id="8">
+                    <h1 class="card__title">Ovo Pelúcia Batman</h1>
+                    <span class="card__preci">$79,99</span>
+                    <p class="card__description">Chocolate ao leite cremoso com o toque refrescante da menta.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="new_img/ovo8.webp" alt="Ovo Bob Esponja" class="card__img">
+                <div class="card__data" data-id="9">
+                    <h1 class="card__title">Ovo Bob Esponja</h1>
+                    <span class="card__preci">$119,99</span>
+                    <p class="card__description">Ovo de Páscoa Pelúcia Bob Esponja e drageados crocantes.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="new_img/ovo16.webp" alt="Dreams Brigadeiro" class="card__img">
+                <div class="card__data" data-id="10">
+                    <h1 class="card__title">Ovo Dreams Brigadeiro</h1>
+                    <span class="card__preci">$119,99</span>
+                    <p class="card__description">Recheado com brigadeiro cremoso e decorado com confeitos.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="new_img/ovo13.webp" alt="Dreams Brownie" class="card__img">
+                <div class="card__data" data-id="11">
+                    <h1 class="card__title">Ovo Dreams Brownie</h1>
+                    <span class="card__preci">$119,99</span>
+                    <p class="card__description">Recheio sabor brownie e toque de noz-pecã.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="new_img/ovo12.webp" alt="Dreams Dubai Pistache" class="card__img">
+                <div class="card__data" data-id="12">
+                    <h1 class="card__title">Ovo Dreams Dubai</h1>
+                    <span class="card__preci">$149,99</span>
+                    <p class="card__description">Recheio cremoso de pistache e pedaços crocantes de kataifi.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="new_img/ovo14.webp" alt="laCreme ao Leite" class="card__img">
+                <div class="card__data" data-id="13">
+                    <h1 class="card__title">Ovo laCreme ao Leite</h1>
+                    <span class="card__preci">$129,99</span>
+                    <p class="card__description">Chocolate ao leite recheado com trufa cremosa laCreme.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="new_img/ovo9.webp" alt="Leite Miau" class="card__img">
+                <div class="card__data" data-id="14">
+                    <h1 class="card__title">Ovo Leite Miau</h1>
+                    <span class="card__preci">$59,99</span>
+                    <p class="card__description">Chocolate ao leite acompanhado de línguas de gato.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="new_img/ovo3.webp" alt="laCreme Kids" class="card__img">
+                <div class="card__data" data-id="15">
+                    <h1 class="card__title">Ovo laCreme Kids</h1>
+                    <span class="card__preci">$49,99</span>
+                    <p class="card__description">Ovo ao leite com ovinhos recheados de leite.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="new_img/ovo4.webp" alt="laCreme Branco" class="card__img">
+                <div class="card__data" data-id="16">
+                    <h1 class="card__title">Ovo laCreme Branco</h1>
+                    <span class="card__preci">$89,99</span>
+                    <p class="card__description">Ovo de Páscoa e bombons de chocolate branco laCreme.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="new_img/ovo5.webp" alt="Cacau Magia" class="card__img">
+                <div class="card__data" data-id="17">
+                    <h1 class="card__title">Ovo Cacau Magia</h1>
+                    <span class="card__preci">$26,99</span>
+                    <p class="card__description">Ovo de chocolate ao leite com textura macia.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+        </div>
+
+        <center>
+            <img src="Imgs/trufa sem fundo.png" alt="" class="logoProduto">
+        </center>
+        <div class="cards">
+            <div class="card">
+                <img src="Imgs/trufa maracuja.png" alt="" class="card__img">
+                <div class="card__data" data-id="18">
+                    <h1 class="card__title">Trufa de Maracujá</h1>
+                    <span class="card__preci">$5,99</span>
+                    <p class="card__description">Experimente a Trufa ao Leite de Maracujá da Cacau Show, a combinação
+                        irresistível do chocolate ao leite com um recheio cremoso de maracujá. Um doce que encanta!</p>
+                    <a href="/compra" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Imgs/trufa mezzo.png" alt="" class="card__img">
+                <div class="card__data" data-id="19">
+                    <h1 class="card__title">Trufa de Mezzo</h1>
+                    <span class="card__preci">$5,99</span>
+                    <p class="card__description">Descubra a Trufa de Chocolate ao Leite e Branco Mezzo da Cacau Show, a
+                        combinação perfeita do chocolate ao leite e branco, ideal para adoçar ainda mais o seu dia a
+                        dia!</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Imgs/trufa menta.png" alt="" class="card__img">
+                <div class="card__data" data-id="20">
+                    <h1 class="card__title">Trufa de Menta</h1>
+                    <span class="card__preci">$5,99</span>
+                    <p class="card__description">Uma combinação sofisticada de chocolate ao leite cremoso com o toque
+                        refrescante da menta. Textura macia e recheio irresistível para um momento especial.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Imgs/trufa tradicional.png" class="card__img">
+                <div class="card__data" data-id="21">
+                    <h1 class="card__title">Trufa Tradicional</h1>
+                    <span class="card__preci">$5,99</span>
+                    <p class="card__description">Para quem deseja uma dose de leveza e muito sabor durante o dia, a
+                        Trufa Tradicional é perfeita para a ocasião, com sua textura macia e recheio cremoso, irá
+                        encantar o paladar.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Imgs/pecã trufa.png" class="card__img">
+                <div class="card__data" data-id="22">
+                    <h1 class="card__title">Trufa de Pecã Caramelizada</h1>
+                    <span class="card__preci">$5,99</span>
+                    <p class="card__description">Chocolate ao leite com noz-pecã caramelizada. A deliciosa trufa que irá
+                        encantar o seu paladar e tornar um momento ainda mais especial, recheado de sabor.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Imgs/nut trufa.png" class="card__img">
+                <div class="card__data" data-id="23">
+                    <h1 class="card__title">Trufa LaNut</h1>
+                    <span class="card__preci">$5,99</span>
+                    <p class="card__description">A Trufa LaNut Pistache é a verdadeira combinação de sabor marcante e
+                        textura suave, proporcionando um momento marcante e saboroso no seu dia. </p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Imgs/creme trufa.png" class="card__img">
+                <div class="card__data" data-id="24">
+                    <h1 class="card__title">Trufa Ao Leite</h1>
+                    <span class="card__preci">$5,99</span>
+                    <p class="card__description">Conheça a deliciosa Trufa laCreme ao Leite, a combinação perfeita de
+                        suavidade e cremosidade, além de seu sabor característico e único. Experimente!</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Imgs/trufa de morango.png" class="card__img">
+                <div class="card__data" data-id="25">
+                    <h1 class="card__title">Trufa de Morango</h1>
+                    <span class="card__preci">$5,99</span>
+                    <p class="card__description">Delicadeza e sabor em uma trufa irresistível, a Trufa de Morango se
+                        encaixa em qualquer ocasião, seja como uma lembrança para alguém especial ou para um mimo no seu
+                        dia.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+        </div>
+
+
+        <center>
+            <img src="Imgs/tablete sem fundo.png" alt="" class="logoProduto">
+        </center>
+        <div class="cards">
+            <div class="card">
+                <img src="Imgs/tablete creme.png" alt="" class="card__img">
+                <div class="card__data" data-id="26">
+                    <h1 class="card__title">Tablete LaCreme</h1>
+                    <span class="card__preci">$10,99</span>
+                    <p class="card__description">O Tablete laCreme de Chocolate ao Leite, cremoso e irresistível, feito
+                        com o famoso chocolate ao leite laCreme, que derrete na boca e encanta o paladar!</p>
+                    <a href="/compra" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Imgs/giunduia branco.png" alt="" class="card__img">
+                <div class="card__data" data-id="27">
+                    <h1 class="card__title">Tablete Chocolate Branco e Avelã</h1>
+                    <span class="card__preci">$19,99</span>
+                    <p class="card__description">Descubra o Tablete LaNut de Chocolate Branco e Avelã, irresistível
+                        tablete de chocolate branco com pasta de avelã, tão cremoso que derrete na boca!</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Imgs/castanha tablete.png" alt="" class="card__img">
+                <div class="card__data" data-id="28">
+                    <h1 class="card__title">Tablete ao Leite com Castanha de Caju</h1>
+                    <span class="card__preci">$16,99</span>
+                    <p class="card__description">O Tablete ao Leite com Castanha de Caju com pedaços crocantes de
+                        castanha de caju. Um equilíbrio perfeito entre cremosidade e crocância!.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Imgs/la creme gianduia.png" class="card__img">
+                <div class="card__data" data-id="29">
+                    <h1 class="card__title">Tablete laCreme ao Leite e Avelã</h1>
+                    <span class="card__preci">$19,99</span>
+                    <p class="card__description">Tablete laCreme de Chocolate ao Leite e Avelã: sabor único e
+                        inesquecível. Aqui, o chocolate ao leite e a avelã formam uma irresistível combinação.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Imgs/tablete branco.png" class="card__img">
+                <div class="card__data" data-id="30">
+                    <h1 class="card__title">Tablete laCreme de Chocolate Branco</h1>
+                    <span class="card__preci">$19,99</span>
+                    <p class="card__description">Descubra o Tablete laCreme de Chocolate Branco, suave e cremoso,
+                        perfeito para se deliciar no dia a dia ou para compartilhar com alguém especial!</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Imgs/morango.png" class="card__img">
+                <div class="card__data" data-id="31">
+                    <h1 class="card__title">Tablete ao Leite com Morango</h1>
+                    <span class="card__preci">$16,99</span>
+                    <p class="card__description">Experimente o Tablete de Chocolate ao Leite Morango da Cacau Show: uma
+                        combinação irresistível de chocolate cremoso e morango, perfeita para momentos especiais!</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Imgs/dreams tablete.png" class="card__img">
+                <div class="card__data" data-id="32">
+                    <h1 class="card__title">Tablete Dreams Mil-Folhas Avelã</h1>
+                    <span class="card__preci">$22,99</span>
+                    <p class="card__description">Conheça o tablete crocante com recheio cremoso de avelã. Uma
+                        experiência sofisticada e irresistível! Ideal para te acompanhar no dia a dia. </p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Imgs/mezzo tablete.png" class="card__img">
+                <div class="card__data" data-id="33">
+                    <h1 class="card__title">Tablete laCreme de Chocolate Mezzo</h1>
+                    <span class="card__preci">$19,99</span>
+                    <p class="card__description">Desfrute do Tablete laCreme de Chocolate Mezzo, que combina o sabor
+                        suave do chocolate ao leite com o delicioso chocolate branco da Cacau Show.</p>
+                    <a href="#" class="card__button">Compre Agora</a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+   <main>
+    <section class="espaco-cafe">
+        <h2 class="titulo-cafe">Espaço Café</h2>
+
+        <div class="decoracao-cafe">
+            <span></span>
+            <p>☕</p>
+            <span></span>
+        </div>
+
+        <div class="carrossel-area">
+            <button class="seta seta-esquerda">&#10094;</button>
+
+            <div class="product-container">
+
+                <div class="product-card" data-id="34">
+                    <div class="product-image">
+                        <span class="discount-tag">20% off</span>
+                        <img src="Imgs/café 1-convertido-de-webp.png" alt="Café Expresso">
+                        <button class="card-btn">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Café Expresso</h3>
+                        <p>Sabores Diversos.</p>
+                        <span class="price">R$19,99</span>
+                        <span class="actual-price">R$25,99</span>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="35">
+                    <div class="product-image">
+                        <span class="discount-tag">20% off</span>
+                        <img src="Imgs/caputino 2-convertido-de-webp.png" alt="Achocolatado">
+                        <button class="card-btn">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Achocolatado</h3>
+                        <p>Sabores Diversos</p>
+                        <span class="price">R$24,99</span>
+                        <span class="actual-price">R$29,99</span>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="36">
+                    <div class="product-image">
+                        <span class="discount-tag">25% off</span>
+                        <img src="Imgs/caputino 2-convertido-de-webp.png" alt="Milk-Shake">
+                        <button class="card-btn">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Milk-Shake</h3>
+                        <p>Diversos Sabores</p>
+                        <span class="price">R$15,99</span>
+                        <span class="actual-price">R$20,00</span>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="37">
+                    <div class="product-image">
+                        <span class="discount-tag">30% off</span>
+                        <img src="Imgs/caputino.jpg" alt="Cappuccino">
+                        <button class="card-btn">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Cappuccino</h3>
+                        <p>Diversos Sabores</p>
+                        <span class="price">R$14,99</span>
+                        <span class="actual-price">R$19,99</span>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="38">
+                    <div class="product-image">
+                        <span class="discount-tag">30% off</span>
+                        <img src="Imgs/cookie.jpeg" alt="Milk-shake Cookie">
+                        <button class="card-btn">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Milk-shake Cookie</h3>
+                        <p>Sabor Único</p>
+                        <span class="price">R$19,99</span>
+                        <span class="actual-price">R$27,99</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="seta seta-direita">&#10095;</button>
+        </div>
+
+        <div class="bolinhas">
+            <span class="ativo"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+</main>
+
+<button id="abrirCarrinho" class="btn-carrinho">
+    🛒 Carrinho
+</button>
+
+<div id="carrinhoModal" class="modal-carrinho" aria-hidden="true">
+    <div class="modal-content-carrinho">
+        <span id="fecharCarrinho" class="fechar-carrinho">&times;</span>
+        <h2>Meu Carrinho</h2>
+
+        <div id="itensCarrinho"></div>
+
+        <p id="totalCarrinho">Total: R$ 0,00</p>
+
+        <button id="comprarBtn" class="btn-comprar">
+            Comprar
+        </button>
+    </div>
+</div>
+
+<div id="formularioCompra" class="modal-form" aria-hidden="true">
+    <div class="modal-content-form">
+        <span id="fecharForm" class="fechar-form">&times;</span>
+        <h2>Dados da Compra</h2>
+
+        <form id="compraForm">
+            <input type="text" id="nomeCliente" placeholder="Nome completo">
+            <input type="text" id="cpf" placeholder="CPF">
+            <input type="text" id="telefone" placeholder="Telefone">
+            <input type="text" id="cep" placeholder="CEP">
+
+            <select id="formaPagamento">
+                <option value="">Forma de pagamento</option>
+                <option value="credito">Cartão de crédito</option>
+                <option value="debito">Cartão de débito</option>
+                <option value="pix">Pix</option>
+            </select>
+
+            <button type="submit" class="btn-finalizar">
+                Continuar para pagamento
+            </button>
+        </form>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-coluna">
+            <img src="Imgs/logo_cacau_show.svg" alt="Cacau Show" class="footer-logo">
+            <p>
+                Há mais de 30 anos espalhando felicidade através do chocolate.
+                Momentos especiais merecem Cacau Show.
+            </p>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>Institucional</h3>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Trabalhe Conosco</a>
+            <a href="#">Nossas Lojas</a>
+            <a href="#">Seja um Franqueado</a>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>Atendimento</h3>
+            <a href="#">Fale Conosco</a>
+            <a href="#">Perguntas Frequentes</a>
+            <a href="#">Trocas e Devoluções</a>
+            <p class="telefone">0800 123 4567</p>
+            <p>Seg a Sex: 8h às 18h</p>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>Newsletter</h3>
+            <p>Receba novidades e promoções exclusivas em seu e-mail.</p>
+            <input type="email" placeholder="Seu melhor e-mail">
+            <button>Cadastrar</button>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Cacau Show Brasil. Todos os direitos reservados.</p>
+
+        <div class="social">
+            <span>Instagram</span>
+            <span>Facebook</span>
+            <span>YouTube</span>
+            <span>TikTok</span>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="JS/supabase.js"></script>
+<script src="JS/produtos.js"></script>
+<script src="JS/mascaras.js"></script>
+</body>
+</html>

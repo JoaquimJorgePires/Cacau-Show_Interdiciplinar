@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque | Cacau Show</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="shortcut icon" href="Imgs/Icone.webp" type="image/x-icon">
+    <link rel="stylesheet" href="CSSs/adm.css">
+    <link rel="stylesheet" href="CSSs/estoque.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class="sidebar">
+            <div class="sidebar-top">
+                <div class="nav-menu">
+                    <a href="adm.html" class="nav-link"><i class="ph ph-squares-four"></i></a>
+                    <a href="estoque.html" class="nav-link active"><i class="ph ph-package"></i></a>
+                    <a href="cadastrados.html" class="nav-link"><i class="ph ph-users"></i></a>
+                </div>
+            </div>
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-link"><i class="ph ph-gear"></i></a>
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Admin" class="avatar">
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <h1>Controle de Estoque</h1>
+                    <p class="label">Gerencie seus produtos e insumos</p>
+                </div>
+                <div class="header-right">
+                    <button class="btn-primary"><i class="ph ph-plus"></i> Novo Produto</button>
+                </div>
+            </header>
+
+            <div class="inventory-grid">
+
+                <div class="inventory-stats">
+
+                    <div class="stat-item card">
+                        <i class="ph ph-package"></i>
+                        <div>
+                            <span>Total de Itens</span>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat-item card alert">
+                        <i class="ph ph-warning-circle"></i>
+                        <div>
+                            <span>Estoque Baixo</span>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat-item card danger">
+                        <i class="ph ph-x-circle"></i>
+                        <div>
+                            <span>Esgotados</span>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat-item card success">
+                        <i class="ph ph-check-circle"></i>
+                        <div>
+                            <span>Em dia</span>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <section class="card inventory-card">
+                    <div class="card-header">
+                        <div class="search-bar inventory-search">
+                            <i class="ph ph-magnifying-glass"></i>
+                            <input type="text" placeholder="Filtrar produtos...">
+                        </div>
+                    </div>
+
+                    <table class="inventory-table">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Categoria</th>
+                                <th>Preço</th>
+                                <th>Quantidade</th>
+                                <th>Status</th>
+                                <th>Funcionário</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="product-cell">
+                                    <img src="https://placehold.co/40x40/3C2415/FFF?text=L" alt="">
+                                    <div>
+                                        <strong>LaCreme ao Leite 100g</strong>
+                                        <span>Tabletes</span>
+                                    </div>
+                                </td>
+                                <td>Tabletes</td>
+                                <td>R$ 15,90</td>
+                                <td>450 un</td>
+                                <td><span class="stock-tag high">Em dia</span></td>
+                                <td>Maria</td>
+                                <td class="actions-cell">
+                                    <div class="stock-controls">
+                                        <input type="number" min="1" value="1" class="qty-input">
+                                        <button class="btn-add-stock" data-id="1">Adicionar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-cell">
+                                    <img src="https://placehold.co/40x40/C09552/FFF?text=T" alt="">
+                                    <div>
+                                        <strong>Trufa Artesanal Maracujá</strong>
+                                        <span>Trufas</span>
+                                    </div>
+                                </td>
+                                <td>Trufas</td>
+                                <td>R$ 4,50</td>
+                                <td>15 un</td>
+                                <td><span class="stock-tag low">Crítico</span></td>
+                                <td>Pedro</td>
+                                <td class="actions-cell">
+                                    <div class="stock-controls">
+                                        <input type="number" min="1" value="1" class="qty-input">
+                                        <button class="btn-add-stock" data-id="1">Adicionar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <div class="dashboard-bottom-grid">
+                    <section class="card orders-card">
+                        <div class="card-header">
+                            <div>
+                                <h3>Planilha de Vendas</h3>
+                                <span class="label">Controle do que foi vendido, cancelado e quem comprou.</span>
+                            </div>
+                            <button class="btn-outline">Exportar</button>
+                        </div>
+
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>Venda</th>
+                                    <th>Cliente</th>
+                                    <th>Itens</th>
+                                    <th>Status</th>
+                                    <th>Total</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#00124</td>
+                                    <td>Ana Silva</td>
+                                    <td>2x Trufa, 1x Tablete</td>
+                                    <td><span class="badge sold">Concluído</span></td>
+                                    <td>R$ 42,30</td>
+                                    <td class="table-actions"><button class="btn-cancel">Cancelar</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#00125</td>
+                                    <td>João Lima</td>
+                                    <td>1x LaCreme 100g</td>
+                                    <td><span class="badge pending">Pendente</span></td>
+                                    <td>R$ 15,90</td>
+                                    <td class="table-actions"><button class="btn-cancel">Cancelar</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#00126</td>
+                                    <td>Renata Costa</td>
+                                    <td>3x Bombons</td>
+                                    <td><span class="badge canceled">Cancelado</span></td>
+                                    <td>R$ 27,00</td>
+                                    <td class="table-actions"><button class="btn-cancel">Reativar</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section class="card employees-card">
+                        <div class="card-header">
+                            <h3>Registro de Funcionários</h3>
+                        </div>
+
+                        <table class="employees-table">
+                            <thead>
+                                <tr>
+                                    <th>Funcionário</th>
+                                    <th>Item Adicionado</th>
+                                    <th>Data</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Maria</td>
+                                    <td>LaCreme ao Leite 100g</td>
+                                    <td>12/05/2026</td>
+                                    <td><span class="badge added">Adicionado</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Pedro</td>
+                                    <td>Trufa Artesanal Maracujá</td>
+                                    <td>11/05/2026</td>
+                                    <td><span class="badge added">Adicionado</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Camila</td>
+                                    <td>Kits Presente</td>
+                                    <td>10/05/2026</td>
+                                    <td><span class="badge added">Adicionado</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="JS/supabase.js"></script>
+<script src="JS/estoque.js"></script>
+
+</html>

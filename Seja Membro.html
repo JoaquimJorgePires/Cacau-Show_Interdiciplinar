@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja Membro | Cacau Show</title>
+    <link href="CSSs/seja membro.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSSs/navbar.css">
+    <link rel="shortcut icon" href="Imgs/Icone.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<div id="modalLogout" class="modal-logout">
+
+    <div class="modal-logout-box">
+
+        <div class="logout-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <h2>Deseja sair?</h2>
+
+        <p>
+            Você será desconectado da sua conta.
+        </p>
+
+        <div class="logout-actions">
+
+            <button id="cancelarLogout" class="btn-cancelar">
+                Cancelar
+            </button>
+
+            <button id="confirmarLogout" class="btn-confirmar">
+                Sair
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<body>
+    
+    <header>
+        <a href="Imgs/logo_cacau_show.svg" class="logo">
+            <img src="Imgs/logo_cacau_show.svg" id="logo">
+        </a>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre nós.html">Sobre nós</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="Seja Membro.html">Seja membro</a></li>
+            <li><a href="login.html" id="loginBtn">Entrar</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <main class="membro-section">
+        <h2 class="section-title">Seja Membro Cacau Show</h2>
+        <p class="intro-text">Faça parte da nossa família e escolha como deseja se conectar ao sabor da felicidade!</p>
+
+        <div class="cards-container">
+            <div class="membro-card" data-aos="zoom-in-up">
+                <img src="Imgs/revendedor.png" alt="Fornecedor" class="card-img">
+                <h3>Fornecedor</h3>
+                <p>Forneça produtos e serviços de qualidade e ajude a manter a excelência que nossos clientes amam.</p>
+                <button class="btn-card" onclick="window.location.href='https://portalrevendedor.cacaushow.com.br/public/landing-page'">
+    Seja um Fornecedor
+</button>
+            </div>
+
+            <div class="membro-card" data-aos="zoom-in-up">
+                <img src="Imgs/franqueado.jpeg" alt="Franqueado" class="card-img">
+                <h3>Franqueado</h3>
+                <p>Abra sua própria loja Cacau Show e leve o sabor da felicidade para sua cidade!</p>
+                <button class="btn-card" onclick="window.location.href='https://www.cacaushow.com.br/franquia.html'">
+    Quero ser Franqueado
+</button>
+            </div>
+
+            <div class="membro-card" data-aos="zoom-in-up">
+                <img src="Imgs/fornecedor.jpeg" alt="Revendedor" class="card-img">
+                <h3>Revendedor</h3>
+                <p>Revenda nossos produtos e conquiste uma renda extra com os melhores chocolates do Brasil.</p>
+               <button class="btn-card" onclick="window.location.href='https://revendedor.cacaushow.com.br/revendedor/'">
+    Seja um Revendedor
+</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-coluna">
+            <img src="Imgs/logo_cacau_show.svg" alt="Cacau Show" class="footer-logo">
+            <p>
+                Há mais de 30 anos espalhando felicidade através do chocolate.
+                Momentos especiais merecem Cacau Show.
+            </p>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>Institucional</h3>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Trabalhe Conosco</a>
+            <a href="#">Nossas Lojas</a>
+            <a href="#">Seja um Franqueado</a>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>Atendimento</h3>
+            <a href="#">Fale Conosco</a>
+            <a href="#">Perguntas Frequentes</a>
+            <a href="#">Trocas e Devoluções</a>
+            <p class="telefone">0800 123 4567</p>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>Newsletter</h3>
+            <p>Receba novidades e promoções exclusivas em seu e-mail.</p>
+            <input type="email" placeholder="Seu melhor e-mail">
+            <button>Cadastrar</button>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Cacau Show Brasil. Todos os direitos reservados.</p>
+
+        <div class="social">
+            <span>Instagram</span>
+            <span>Facebook</span>
+            <span>YouTube</span>
+            <span>TikTok</span>
+        </div>
+    </div>
+</footer>
+    <script src="JS/navbar.js"></script>
+    <script src="JS/seja membro.js"></script>
+</body>
+</html>

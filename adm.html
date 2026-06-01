@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Cacau Show</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="shortcut icon" href="Imgs/Icone.webp" type="image/x-icon">
+    <link rel="stylesheet" href="CSSs/adm.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="sidebar-top">
+                <div class="nav-menu">
+                    <!-- <a href="#" class="nav-link active"><i class="ph ph-squares-four"></i></a> -->
+                    <!-- <a href="#" class="nav-link"><i class="ph ph-shopping-cart"></i></a> -->
+                    <a href="estoque.html" class="nav-link"><i class="ph ph-package"></i></a>
+                    <!-- <a href="#" class="nav-link"><i class="ph ph-chart-pie"></i></a> -->
+                    <a href="cadastrados.html" class="nav-link"><i class="ph ph-users"></i></a>
+                </div>
+            </div>
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-link"><i class="ph ph-gear"></i></a>
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Admin Avatar" class="avatar">
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <h1>Dashboard, Cacau Show</h1>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <input type="text" id="campoPesquisa" placeholder="Pesquisar...">
+                    </div>
+                    <div class="user-profile-header" id="userMenu">
+                        <span>Olá, <strong>Admin</strong></span>
+                        <i class="ph ph-caret-down"></i>
+
+                        <button class="logout-btn" id="logoutBtn">
+                            <i class="ph ph-sign-out"></i>
+                            Sair
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-grid">
+
+                <section class="card card-revenue">
+                    <div class="card-header">
+                        <div>
+                            <span class="label">Receita Total</span>
+                            <h2 class="value" id="receitaTotal">R$ 0,00</h2>
+                            <span class="growth positive"><i class="ph ph-trend-up"></i> 2.14% vs última semana</span>
+                        </div>
+                        <button class="btn-outline" id="gerarPdf">
+                            Gerar PDF
+                        </button>
+                    </div>
+
+                    <div class="chart-container">
+                        <div class="chart-item">
+                            <div class="chart-bar" id="seg"></div>
+                            <span class="bar-label">Seg</span>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-bar" id="ter"></div>
+                            <span class="bar-label">Ter</span>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-bar" id="qua"></div>
+                            <span class="bar-label">Qua</span>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-bar" id="qui"></div>
+                            <span class="bar-label">Qui</span>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-bar" id="sex"></div>
+                            <span class="bar-label">Sex</span>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-bar" id="sab"></div>
+                            <span class="bar-label">Sáb</span>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-bar" id="dom"></div>
+                            <span class="bar-label">Dom</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card card-rating">
+
+                    <div class="card-header">
+                        <h3>Produtos Mais Vendidos</h3>
+                    </div>
+
+                    <canvas id="graficoCategorias"></canvas>
+
+                </section>
+                <section class="card card-most-requested">
+                    <div class="card-header">
+                        <h3>Mais Pedidos</h3>
+                    </div>
+                    <div class="product-list-minimal" id="maisPedidos">
+                        <div class="product-item-min">
+                            <img src="https://placehold.co/44x44/3C2415/FFF?text=LC" alt="LaCreme">
+                            <div class="p-info">
+                                <strong>LaCreme ao Leite</strong>
+                                <span>Chocolate</span>
+                            </div>
+                            <span class="p-price">R$ 12,90</span>
+                        </div>
+                        <div class="product-item-min">
+                            <img src="https://placehold.co/44x44/C09552/FFF?text=TA" alt="Trufa">
+                            <div class="p-info">
+                                <strong>Trufa Artesanal</strong>
+                                <span>Morango</span>
+                            </div>
+                            <span class="p-price">R$ 4,50</span>
+                        </div>
+                        <div class="product-item-min">
+                            <img src="https://placehold.co/44x44/6F4E37/FFF?text=TB" alt="Tablete">
+                            <div class="p-info">
+                                <strong>Tablete Bendito Cacao</strong>
+                                <span>70% Cacau</span>
+                            </div>
+                            <span class="p-price">R$ 15,90</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card card-weekly-table">
+                    <div class="card-header">
+                        <h3>Relatório Semanal</h3>
+                        <button class="btn-outline">Ver tudo</button>
+                    </div>
+                    <div class="cards">
+
+                        <div class="card">
+                            <h3>Total Vendido</h3>
+                            <p id="totalVendas">R$ 0,00</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>Total Produtos</h3>
+                            <p id="totalProdutos">0</p>
+                        </div>
+
+                    </div>
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Dia</th>
+                                <th>Pedidos</th>
+                                <th>Status</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tabelaRelatorio">
+
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <div id="modalRelatorio" class="modal hidden">
+        <div class="modal-content">
+            <h2>Relatório Completo</h2>
+
+            <div id="relatorioCompleto"></div>
+
+            <button id="fecharModal" class="btn-close-modal">
+                ✕ Fechar
+            </button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="JS/supabase.js"></script>
+    <script src="JS/adm.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="180x180" href="new_img/logo.png"/>
+    <title>Cacau Show Brasil</title>
+    <link href="CSSs/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSSs/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="Imgs/Icone.webp" type="image/x-icon">
+</head>
+<div id="modalLogout" class="modal-logout">
+
+    <div class="modal-logout-box">
+
+        <div class="logout-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <h2>Deseja sair?</h2>
+
+        <p>
+            Você será desconectado da sua conta.
+        </p>
+
+        <div class="logout-actions">
+
+            <button id="cancelarLogout" class="btn-cancelar">
+                Cancelar
+            </button>
+
+            <button id="confirmarLogout" class="btn-confirmar">
+                Sair
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<body>
+
+    <header>
+        <a href="Imgs/logo_cacau_show.svg" class="logo">
+            <img src="Imgs/logo_cacau_show.svg" id="logo">
+        </a>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre nós.html">Sobre nós</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="Seja Membro.html">Seja membro</a></li>
+            <li><a href="login.html" id="loginBtn">Entrar</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <main>
+        <section>
+       
+                   
+            <div  href="#home" class="item active" style="--background:   #3D2314">
+                <!-- <div class="title">Trufas</div>
+                <div class="title" id="bordatxt">Trufas</div>
+                <img src="trufa da home.png" alt="" class="imgprc"> -->
+                 <!-- Add img tema pascoa -->
+                <div class="title">Pascoa</div>
+                <div class="title" id="bordatxt">Pascoa</div>
+                <img src="new_img/ovo10.webp" alt="" class="imgprc">
+                <!-- Fim -->
+            </div>
+
+            <div class="item" style="--background: #5C331E">
+                <div class="title">LaCreme</div>
+                <div class="title" id="bordatxt">LaCreme</div>
+                <img src="Imgs/lacreme1.png" alt="" class="imgprc">
+
+            </div>
+
+            <div class="item" style="--background:#A05D31">
+                <div class="title">LaNut</div>
+                <div class="title" id="bordatxt">LaNut</div>
+                <img src="Imgs/lanut1.png" alt="" class="imgprc">
+            </div>
+
+            <div class="item" style="--background: #A05D31">
+                <div class="title">Bytes</div>
+                <div class="title" id="bordatxt">Bytes</div>
+                <img src="Imgs/bytes1.png" alt="" class="imgprc">
+
+            </div>
+
+            <div class="item" style="--background:#5C331E">
+                <div class="title">Miau</div>
+                <div class="title" id="bordatxt">Miau</div>
+                <img src="Imgs/miau1.png" alt="" class="imgprc">
+
+            </div>
+
+            <div class="item" style="--background:#A05D31">
+                <div class="title">Dreams</div>
+                <div class="title" id="bordatxt">Dreams</div>
+                <img src="Imgs/dreams1.png" alt="" class="imgprc">
+
+            </div>
+             
+
+            <div class="arrow">
+                <button id="prev">
+                    </button>
+                        <button id="next"> > </button>
+            </div>
+        </section>
+    </main>
+
+    <section class="about-section">
+        <div class="section-content" data-aos="zoom-in-up">
+            <div class="about-image-wrapper">
+                <img src="Imgs/fundo1.jpg" alt="" class="about-image">
+            </div>
+            <div class="about-details">
+                <h2 class="section-title">Sobre nós</h2>
+                <p class="text">Bem-vindo à Cacau Show Brasil! Somos apaixonados em adoçar o seu dia, trazendo os melhores produtos para você.
+                    Nossa missão é oferecer alegria, conforto e qualidade com uma seleção exclusiva de chocolates, cafés e acessórios. Trabalhamos com as melhores marcas do mercado para garantir que você sempre se sinta satisfeito.
+                    Seja para o dia a dia ou para ocasiões especiais, temos o que você precisa!</p>
+                <div class="social-link-list">
+                    <a href="https://www.facebook.com/CacauShow" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/cacaushow/" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/cacaushow" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <h2 class="section-title" data-aos="zoom-in-up">Nossas Linhas</h2>
+        <div class="section-content">
+            <ul class="menu-list">
+                <li class="menu-item" data-aos="zoom-in-up">
+                    <!-- <img src="trufas1.png" alt="" class="menu-image">
+                    <h3 class="name">Trufas</h3>
+                    <p class="text">As melhores Trufas para todos os tipos de pessoas.</p> -->
+                    <!-- Tema Pascoa -->
+                     <img src="new_img/pascoaHome.jpg" alt="" class="menu-image"style="width: 64%; height: auto;">
+                    <h3 class="name">Ovos de Pascoa</h3>
+                    <p class="text">Melhores sabores de Ovos de Pascoa.</p>
+                    <!-- Fim -->
+                </li>
+
+                <li class="menu-item" data-aos="zoom-in-up">
+                    <img src="Imgs/bytes.png" alt="" class="menu-image" style="width: 64%; height: auto;">
+                    <h3 class="name">Bytes</h3>
+                    <p class="text">O melhor aperitivo para momentos corridos.</p>
+                </li>
+
+                <li class="menu-item" data-aos="zoom-in-up">
+                   <img src="new_img/lanut2.png" alt="" class="menu-image" style="max-width: 65%; height: auto; ">
+                    <h3 class="name">LaNut</h3>
+                    <p class="text">O queridinho do momento.</p>
+                </li>
+
+                <li class="menu-item" data-aos="zoom-in-up">
+                    <img src="Imgs/lacreme.png" alt="" class="menu-image">
+                    <h3 class="name">LaCreme</h3>
+                    <p class="text">A melhor barra de chocolate do mercado.</p>
+                </li>
+
+                <li class="menu-item" data-aos="zoom-in-up">
+                    <img src="Imgs/dreams.png" alt="" class="menu-image">
+                    <h3 class="name">Dreams</h3>
+                    <p class="text">Os recheados mais famosos da Cacau.</p>
+                </li>
+
+                <li class="menu-item" data-aos="zoom-in-up">
+                    <img src="Imgs/miau.png" alt="" class="menu-image">
+                    <h3 class="name">Miau</h3>
+                    <p class="text">Um lanchinho que lembra seu melhor amigo.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <h2 class="section-title" data-aos="zoom-in-up">Feedbacks</h2>
+        <div class="section-content" data-aos="zoom-in-up">
+            <div class="slider-container swiper">
+                <div class="slider-wrapper">
+                    <ul class="testimonials-list swiper-wrapper">
+                        <li class="testimonial swiper-slide">
+                            <img src="Imgs/pitty.jpg" alt="user" class="user-image">
+                            <h3 class="name">Pitty</h3>
+                            <i class="feedback">"Excelente atendimento e produtos de alta qualidade. Recomendo a todos!"</i>
+                        </li>
+                        <li class="testimonial swiper-slide">
+                            <img src="Imgs/kaua.jpg" alt="user" class="user-image">
+                            <h3 class="name">Cauã Reymond</h3>
+                            <i class="feedback">"Gostei bastante da variedade de chocolates. Voltarei em breve!"</i>
+                        </li>
+                        <li class="testimonial swiper-slide">
+                            <img src="Imgs/gisele.jpg" alt="user" class="user-image">
+                            <h3 class="name">Gisele Bündchen</h3>
+                            <i class="feedback">"Ótima loja, os preços são justos e o produto é de qualidade."</i>
+                        </li>
+                        <li class="testimonial swiper-slide">
+                            <img src="Imgs/ana.jpg" alt="user" class="user-image">
+                            <h3 class="name">Ana Hickmann</h3>
+                            <i class="feedback">"O atendimento foi impecável. Com certeza farei mais compras aqui!"</i>
+                        </li>
+                        <li class="testimonial swiper-slide">
+                            <img src="Imgs/matheus.jpg" alt="user" class="user-image">
+                            <h3 class="name">Matheus Solano</h3>
+                            <i class="feedback">"A experiência de compra foi incrível. Recomendo a todos que gostam de qualidade!"</i>
+                        </li>
+                    </ul>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div class="fundo">
+    <div class="retangulo">
+        <div class="esquerda">
+            <input type="text" id="feedback-nome" class="input-nome" placeholder="Digite seu nome">
+            
+            <div class="avatar-container">
+                <img id="avatar-preview" class="avatar-imagem" src="https://via.placeholder.com/200" alt=".">
+                <input type="file" id="avatar-upload" accept="image/*">
+            </div>
+        </div>
+        <div class="direita">
+            <h2 class="titulo-feedback">Nos dê seu feedback</h2>
+            <textarea id="feedback-mensagem" class="textarea-feedback" placeholder="Digite seu feedback aqui..."></textarea>
+            <button id="btn-enviar-feedback" class="btn-enviar">Enviar Feedback</button> 
+            
+        </div>
+    </div>
+</div>
+            <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-coluna">
+            <img src="Imgs/logo_cacau_show.svg" alt="Cacau Show" class="footer-logo">
+            <p>
+                Há mais de 30 anos espalhando felicidade através do chocolate.
+                Momentos especiais merecem Cacau Show.
+            </p>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>Institucional</h3>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Trabalhe Conosco</a>
+            <a href="#">Nossas Lojas</a>
+            <a href="#">Seja um Franqueado</a>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>Atendimento</h3>
+            <a href="#">Fale Conosco</a>
+            <a href="#">Perguntas Frequentes</a>
+            <a href="#">Trocas e Devoluções</a>
+            <p class="telefone">0800 123 4567</p>
+            <p>Seg a Sex: 8h às 18h</p>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>Newsletter</h3>
+            <p>Receba novidades e promoções exclusivas em seu e-mail.</p>
+            <input type="email" placeholder="Seu melhor e-mail">
+            <button>Cadastrar</button>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Cacau Show Brasil. Todos os direitos reservados.</p>
+
+        <div class="social">
+            <span>Instagram</span>
+            <span>Facebook</span>
+            <span>YouTube</span>
+            <span>TikTok</span>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 150,
+            duration: 1200
+        });
+    </script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script> -->
+<!-- <script src="supabase.js"></script> -->
+</body>
+<script src="JS/script.js"></script>
+</html>

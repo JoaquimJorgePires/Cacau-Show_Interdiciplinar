@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Cacau Show</title>
+    <link rel="stylesheet" href="CSSs/navbar.css">
+    <link href="CSSs/sobre.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="new_img/logo.png">
+    <link rel="shortcut icon" href="Imgs/Icone.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+<div id="modalLogout" class="modal-logout">
+
+    <div class="modal-logout-box">
+
+        <div class="logout-icon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <h2>Deseja sair?</h2>
+
+        <p>
+            Você será desconectado da sua conta.
+        </p>
+
+        <div class="logout-actions">
+
+            <button id="cancelarLogout" class="btn-cancelar">
+                Cancelar
+            </button>
+
+            <button id="confirmarLogout" class="btn-confirmar">
+                Sair
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- 
+<header>
+    <a href="index.html" class="logo">
+        <img src="Imgs/logo_cacau_show.svg" id="logo" alt="Cacau Show">
+    </a>
+
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre nós.html">Sobre nós</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="Seja Membro.html">Seja membro</a></li>
+        <li><a href="login.html" id="loginBtn">Entrar</a></li>
+    </ul>
+
+    <div class="bx bx-menu" id="menu-icon"></div>
+</header> -->
+
+<div id="navbar-container"></div>
+<script>
+fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "js/navbar.js";
+        document.body.appendChild(script);
+    });
+</script>
+
+<main>
+
+    <section class="hero-about">
+        <img src="Imgs/test1.png" alt="Chocolates Cacau Show" class="background-image">
+
+        <div class="content-container">
+            <span class="hero-tag">Cacau Show Brasil</span>
+            <h1>Sobre Nós</h1>
+            <h2>Chocolate que transforma momentos em memórias.</h2>
+            <p>
+                Vivemos para tocar a vida das pessoas, compartilhando momentos especiais
+                por meio do sabor, da qualidade e do carinho em cada detalhe.
+            </p>
+
+            <div class="links-container">
+                <a href="#">Paixão por realizar</a>
+                <a href="#">Mais para mais</a>
+                <a href="#">Inovação</a>
+                <a href="#">Atenção aos detalhes</a>
+                <a href="#">Lealdade</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-dois">
+        <div class="imagem">
+            <img src="Imgs/cacau.png" alt="Produto Cacau Show">
+        </div>
+
+        <div class="texto-dois">
+            <span class="section-label">Nossa essência</span>
+            <h1>Cacau Show</h1>
+            <p>
+                Características que inspiram cada trufa, bombom, tablete ou presente
+                que chega até você.
+            </p>
+
+            <div class="cards-container">
+                <div class="sobre-card">
+                    <h2>Missão</h2>
+                    <p>
+                        Transformar o ordinário em extraordinário, oferecendo ao nosso
+                        ecossistema uma relação duradoura com foco em crescimento,
+                        oportunidades, sustentabilidade e encantamento.
+                    </p>
+                </div>
+
+                <div class="sobre-card">
+                    <h2>Visão</h2>
+                    <p>
+                        Ser inspiração no universo do cacau, honrando todas as
+                        potencialidades desse fruto e criando experiências inesquecíveis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-instituto">
+        <div class="instituto-texto">
+            <span class="section-label">Impacto social</span>
+            <h2>Instituto Cacau Show</h2>
+            <p>
+                O Instituto Cacau Show promove o direito à educação integral de qualidade
+                em Itapevi/SP, oferecendo atividades gratuitas para crianças e jovens.
+                Ao longo dos anos, milhares de educandos foram acolhidos por projetos
+                que incentivam desenvolvimento, cultura e futuro.
+            </p>
+        </div>
+
+        <div class="instituto-image">
+            <img src="Imgs/lojaCacau.png" alt="Instituto Cacau Show">
+        </div>
+    </section>
+
+    <section class="sustentabilidade">
+        <div class="sustentabilidade-card">
+            <img src="Imgs/relatorio.png" alt="Relatório de sustentabilidade">
+        </div>
+    </section>
+
+</main>
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-coluna">
+            <img src="Imgs/logo_cacau_show.svg" alt="Cacau Show" class="footer-logo">
+            <p>
+                Há mais de 30 anos espalhando felicidade através do chocolate.
+                Momentos especiais merecem Cacau Show.
+            </p>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>Institucional</h3>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Trabalhe Conosco</a>
+            <a href="#">Nossas Lojas</a>
+            <a href="#">Seja um Franqueado</a>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>Atendimento</h3>
+            <a href="#">Fale Conosco</a>
+            <a href="#">Perguntas Frequentes</a>
+            <a href="#">Trocas e Devoluções</a>
+            <p class="telefone">0800 123 4567</p>
+            <p>Seg a Sex: 8h às 18h</p>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>Newsletter</h3>
+            <p>Receba novidades e promoções exclusivas em seu e-mail.</p>
+            <input type="email" placeholder="Seu melhor e-mail">
+            <button>Cadastrar</button>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Cacau Show Brasil. Todos os direitos reservados.</p>
+
+        <div class="social">
+            <span>Instagram</span>
+            <span>Facebook</span>
+            <span>YouTube</span>
+            <span>TikTok</span>
+        </div>
+    </div>
+</footer>
+<script src="JS/navbar.js"></script>
+<script src="JS/sobre.js"></script>
+</body>
+</html>
